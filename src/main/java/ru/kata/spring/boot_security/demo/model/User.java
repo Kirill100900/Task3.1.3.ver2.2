@@ -46,6 +46,15 @@ public class User implements UserDetails {
     public User() {
     }
 
+    public User(Long id,String email,String password, String username, Set<Role> roles) {
+        this.email = email;
+        this.id = id;
+        this.roles = roles;
+        this.password = password;
+        this.username = username;
+
+    }
+
     @Override
     public String toString() {
         return "User{" +

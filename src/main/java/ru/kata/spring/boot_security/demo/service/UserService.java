@@ -14,7 +14,7 @@ import ru.kata.spring.boot_security.demo.model.User;
 import java.util.List;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserService implements UserServiceInter {
     private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;
 
