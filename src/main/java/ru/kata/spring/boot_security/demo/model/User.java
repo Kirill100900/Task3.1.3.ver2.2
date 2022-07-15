@@ -6,6 +6,7 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -45,8 +46,7 @@ public class User implements UserDetails {
 
     public User() {
     }
-
-    public User(Long id,String email,String password, String username, Set<Role> roles) {
+public User(Long id,String email,String password, String username, Set<Role> roles) {
         this.email = email;
         this.id = id;
         this.roles = roles;

@@ -23,7 +23,7 @@ public class UserService implements UserServiceInter {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
-
+@Transactional
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
